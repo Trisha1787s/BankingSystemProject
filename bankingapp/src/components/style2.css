@@ -1,0 +1,133 @@
+.Header{
+    margin-top: 100px;
+    margin-right: 150px;
+    margin-left: 150px;
+    padding-left: 250px;
+    text-align: center;
+    font-weight: normal;
+font-size: 35px;
+}
+.Picture1{
+    background-image: url(../images/img9.jpg);
+    height: 400px; 
+    width: 1000px;
+}
+.Display{
+    background-image:linear-gradient(rgba(255, 255, 255, 0.61), rgba(255,255,255,.5)),  url(../images/img1.jpg);
+    height: 900px; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   /* opacity: 0.5;  */
+    /* z-index: -1;  */
+  
+}
+
+.card{
+    width: 100rem;
+    height: auto;
+      margin-left: 1000px;
+     
+}
+.Display1{
+    margin-top: 100px;
+    margin-right: 400px;
+    margin-left: 400px;
+    padding-left: 250px;
+    text-align: center;
+    font-weight: normal;
+   
+font-size: 30px;
+}
+
+
+.Display2{
+    margin-top: 100px;
+    margin-right: 100px;
+    margin-left: 0px;
+    /* padding-left: 50px; */
+    /* text-align: center; */
+    font-weight: normal;
+
+font-size: 30px;
+}
+
+.Display3{
+    margin-top: 100px;
+    margin-right: 400px;
+    margin-left: 100px;
+    padding-left: 250px;
+    text-align: center;
+    font-weight: normal;
+   
+font-size: 30px;
+}
+
+.Display4{
+    margin-top: 100px;
+    margin-right: 700px;
+    margin-left: 0px;
+    /* padding-left: 250px; */
+    text-align: center;
+    font-weight: normal;
+   
+font-size: 30px;
+}
+
+  .no-outline:focus {
+    outline: none;
+  }
+
+  .Display5{
+
+    background-image:linear-gradient(rgba(255, 255, 255, 0.61), rgba(255,255,255,.5)),  url(../images/img1.jpg);
+    height: 1000px; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   /* opacity: 0.5;  */
+    /* z-index: -1;  */
+font-size: 20px;
+}
+
+
+.Display6{
+    margin-top: 100px;
+    /* margin-right: 400px;
+    margin-left: 100px;
+    padding-left: 250px; */
+    text-align: center;
+    font-weight: normal;
+   
+font-size: 20px;
+}
+
+
+
+
+table {
+    width: 840px; /* 140px * 5 column + 16px scrollbar width */
+    border-spacing: 0;
+    margin-left: 400px;
+}
+
+tbody, thead tr { display: block; width: 700px; }
+
+tbody {
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+tbody td, thead th {
+    width: 140px;
+}
+
+thead th:last-child {
+    width: 140px; /* 140px + 16px scrollbar width */
+}
+

@@ -1,0 +1,431 @@
+
+	
+
+
+			
+			
+	$(window).load(function() {
+  
+
+    $("#flexiselDemo3").flexisel({
+        visibleItems: 6,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 3000,            
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+            portrait: { 
+                changePoint:481,
+                visibleItems: 1
+            }, 
+            landscape: { 
+                changePoint:1024,
+                visibleItems: 3
+            },
+			
+			landscape: { 
+                changePoint:1199,
+                visibleItems: 6
+            },
+			
+			
+            portrait: { 
+                changePoint:768,
+                visibleItems: 3
+            }
+        }
+    });
+
+    
+    
+});		
+
+
+/*
+$(document).ready(function(){
+				$("area[rel^='prettyPhoto']").prettyPhoto();
+				
+				$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true});
+				$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+		
+				
+			}); 
+			*/
+			
+	
+$(document).ready(function(){
+ $("#h1").slideToggle(300).siblings("#h1").slideUp("slow");
+   $("#h1").siblings().css({backgroundImage:"url(down.png)"});
+});
+
+$(".menu_body_inner").click(function()
+    {
+		 $(this).css({backgroundImage:"url(down.png)"}).next(".check").slideToggle(300).siblings(".check").slideUp("slow");
+        $(this).siblings().css({backgroundImage:"url(left.png)"});
+		// $(".check").slideToggle(300).siblings("#check").slideUp("slow");
+       // $(".check").siblings().css({backgroundImage:"url(down.png)"});
+	});
+	
+	$(window).load(function() {
+  
+
+    $("#flexisel-innner").flexiselinner({
+        visibleItems: 3,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 3000,            
+        pauseOnHover: false,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+            portrait: { 
+                changePoint:481,
+                visibleItems: 2
+            }, 
+			portrait: { 
+                changePoint:480,
+                visibleItems: 2
+            }, 
+            landscape: { 
+                changePoint:1024,
+                visibleItems: 2
+            },
+			
+			landscape: { 
+                changePoint:1199,
+                visibleItems: 2
+            },
+			
+			
+            portrait: { 
+                changePoint:768,
+                visibleItems: 2
+            }
+        }
+    });});
+	
+	$(window).load(function() {
+  
+
+    $("#flexisel-inner").flexiselinner({
+        visibleItems: 4,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 3000,            
+        pauseOnHover: false,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+            portrait: { 
+                changePoint:481,
+                visibleItems: 2
+            }, 
+			portrait: { 
+                changePoint:325,
+                visibleItems: 1
+            }, 
+            landscape: { 
+                changePoint:1024,
+                visibleItems: 4
+            },
+			
+			landscape: { 
+                changePoint:1199,
+                visibleItems: 4
+            },
+			
+			
+            portrait: { 
+                changePoint:768,
+                visibleItems: 2
+            }
+        }
+    });});
+	
+	
+	
+	
+	$(window).load(function() {
+  
+
+    $("#flexisel-testimonials").flexisetestimonials({
+        visibleItems: 3,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 3000,            
+        pauseOnHover: false,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+            portrait: { 
+                changePoint:481,
+                visibleItems: 2
+            }, 
+			portrait: { 
+                changePoint:480,
+                visibleItems: 2
+            }, 
+            landscape: { 
+                changePoint:1024,
+                visibleItems: 2
+            },
+			
+			landscape: { 
+                changePoint:1199,
+                visibleItems: 2
+            },
+			
+			
+            portrait: { 
+                changePoint:768,
+                visibleItems: 2
+            }
+        }
+    });});
+
+    
+
+	
+	
+	
+	
+			
+	(function($){
+
+    $.fn.extend({ 
+
+        hoverZoom: function(settings) {
+ 
+            var defaults = {
+                overlay: true,
+                overlayColor: '#2e9dbd',
+                overlayOpacity: 0.7,
+                zoom: 25,
+                speed: 300
+            };
+             
+            var settings = $.extend(defaults, settings);
+         
+            return this.each(function() {
+            
+                var s = settings;
+                var hz = $(this);
+                var image = $('img', hz);
+
+                image.load(function() {
+                    
+                    if(s.overlay === true) {
+                        $(this).parent().append('<div class="zoomOverlay" />');
+                        $(this).parent().find('.zoomOverlay').css({
+                            opacity:0, 
+                            display: 'block', 
+                            backgroundColor: s.overlayColor
+                        }); 
+                    }
+                
+                    var width = $(this).width();
+                    var height = $(this).height();
+                
+                    $(this).fadeIn(1000, function() {
+                        $(this).parent().css('background-image', 'none');
+                        hz.hover(function() {
+                            $('img', this).stop().animate({
+                                height: height + s.zoom,
+                                marginLeft: -(s.zoom),
+                                marginTop: -(s.zoom)
+                            }, s.speed);
+                            if(s.overlay === true) {
+                                $(this).parent().find('.zoomOverlay').stop().animate({
+                                    opacity: s.overlayOpacity
+                                }, s.speed);
+                            }
+                        }, function() {
+                            $('img', this).stop().animate({
+                                height: height,
+                                marginLeft: 0,
+                                marginTop: 0
+                            }, s.speed);
+                            if(s.overlay === true) {
+                                $(this).parent().find('.zoomOverlay').stop().animate({
+                                    opacity: 0
+                                }, s.speed);
+                            }
+                        });
+                    });
+                });    
+            });
+        }
+    });
+})(jQuery);
+
+$(function() {
+        
+            $('#blue').hoverZoom(); // Default
+            
+            $('#green').hoverZoom({
+                overlayColor: '#90bd2e',
+                zoom: 50
+            });
+            
+            $('#black').hoverZoom({
+                overlayColor: '#333',
+                zoom: 0
+            });
+            
+            /* USAGE
+            
+            $('#pink').hoverZoom({
+                overlay: true, // false to turn off (default true)
+                overlayColor: '#2e9dbd', // overlay background color
+                overlayOpacity: 0.7, // overlay opacity
+                zoom: 25, // amount to zoom (px)
+                speed: 300 // speed of the hover
+            });
+            
+            */
+            
+        }); 
+		
+		
+		
+	
+/*----------------------------------------------------*/
+/*	Clients section Parallax
+/*----------------------------------------------------*/
+
+
+	jQuery("a[rel^='prettyPhoto']").prettyPhoto({overlay_gallery: false});
+		
+	
+	
+	
+		
+		
+		
+		$(document).ready(function(){
+		$("a[rel^='prettyPhoto']").prettyPhoto({
+			animation_speed: 'fast', /* fast/slow/normal */
+			slideshow: 5000, /* false OR interval time in ms */
+			autoplay_slideshow: false, /* true/false */
+			opacity: 0.80, /* Value between 0 and 1 */
+			show_title: true, /* true/false */
+			allow_resize: true, /* Resize the photos bigger than viewport. true/false */
+			default_width: 500,
+			default_height: 344,
+			counter_separator_label: '/', /* The separator for the gallery counter 1 "of" 2 */
+			theme: 'pp_default', /* light_rounded / dark_rounded / light_square / dark_square / facebook */
+			horizontal_padding: 20, /* The padding on each side of the picture */
+			hideflash: false, /* Hides all the flash object on a page, set to TRUE if flash appears over prettyPhoto */
+			wmode: 'opaque', /* Set the flash wmode attribute */
+			autoplay: true, /* Automatically start videos: True/False */
+			modal: false, /* If set to true, only the close button will close the window */
+			deeplinking: true, /* Allow prettyPhoto to update the url to enable deeplinking. */
+			overlay_gallery: true, /* If set to true, a gallery will overlay the fullscreen image on mouse over */
+			keyboard_shortcuts: true, /* Set to false if you open forms inside prettyPhoto */
+			changepicturecallback: function(){}, /* Called everytime an item is shown/changed */
+			callback: function(){}, /* Called when prettyPhoto is closed */
+			ie6_fallback: true,
+			markup: '<div class="pp_pic_holder"> \
+						<div class="ppt">&nbsp;</div> \
+						<div class="pp_top"> \
+							<div class="pp_left"></div> \
+							<div class="pp_middle"></div> \
+							<div class="pp_right"> </div> \
+						</div> \
+						<div class="pp_content_container"> \
+							<div class="pp_left"> \
+							<div class="pp_right"> <a class="pp_close" style="margin-top:-20px" href="#">Close</a>\
+								<div class="pp_content"> \
+									<div class="pp_loaderIcon"></div> \
+									<div class="pp_fade"> \
+										<a href="#" class="pp_expand" title="Expand the image">Expand</a> \
+										<div class="pp_hoverContainer"> \
+											<a class="pp_next" href="#">next</a> \
+											<a class="pp_previous" href="#">previous</a> \
+										</div> \
+										<div id="pp_full_res"></div> \
+										<div class="pp_details"> \
+											<div class="pp_nav"> \
+												<a href="#" class="pp_arrow_previous">Previous</a> \
+												<p class="currentTextHolder">0/0</p> \
+												<a href="#" class="pp_arrow_next">Next</a> \
+											</div> \
+											<p ></p> \
+											<div ></div> \
+											 \
+										</div> \
+									</div> \
+								</div> \
+							</div> \
+							</div> \
+						</div> \
+						<div class="pp_bottom"> \
+							<div class="pp_left"></div> \
+							<div class="pp_middle"></div> \
+							<div class="pp_right"></div> \
+						</div> \
+					</div> \
+					<div class="pp_overlay"></div>',
+			gallery_markup: '<div class="pp_gallery"> \
+								<a href="#" class="pp_arrow_previous">Previous</a> \
+								<div> \
+									<ul> \
+										{gallery} \
+									</ul> \
+								</div> \
+								<a href="#" class="pp_arrow_next">Next</a> \
+							</div>',
+			gallery_markup: '<div class="pp_gallery"> \
+								<a href="#" class="pp_arrow_previous">Previous</a> \
+								<div> \
+									<ul> \
+										{gallery} \
+									</ul> \
+								</div> \
+								<a href="#" class="pp_arrow_next">Next</a> \
+							</div>',
+			flash_markup: '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="{width}" height="{height}"><param name="wmode" value="{wmode}" /><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="{path}" /><embed src="{path}" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="{width}" height="{height}" wmode="{wmode}"></embed></object>',
+			quicktime_markup: '<object classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" codebase="http://www.apple.com/qtactivex/qtplugin.cab" height="{height}" width="{width}"><param name="src" value="{path}"><param name="autoplay" value="{autoplay}"><param name="type" value="video/quicktime"><embed src="{path}" height="{height}" width="{width}" autoplay="{autoplay}" type="video/quicktime" pluginspage="http://www.apple.com/quicktime/download/"></embed></object>',
+			iframe_markup: '<iframe src ="{path}" width="{width}" height="{height}" frameborder="no"></iframe>',
+			inline_markup: '<div class="pp_inline">{content}</div>',
+			custom_markup: '',
+			social_tools: '<div class="pp_social"><div class="twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div><div class="facebook"><iframe src="http://www.facebook.com/plugins/like.php?locale=en_US&href='+location.href+'&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:23px;" allowTransparency="true"></iframe></div></div>' /* html or false to disable */
+		});
+	});
+
+
+$(window).load(function() {
+  
+
+    $("#flexisel-home").flexiselhome({
+        visibleItems: 4,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 3000,            
+        pauseOnHover: false,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+            portrait: { 
+                changePoint:481,
+                visibleItems: 2
+            }, 
+			portrait: { 
+                changePoint:480,
+                visibleItems: 2
+            }, 
+            landscape: { 
+                changePoint:1024,
+                visibleItems: 2
+            },
+			
+			landscape: { 
+                changePoint:1199,
+                visibleItems: 2
+            },
+			
+			
+            portrait: { 
+                changePoint:768,
+                visibleItems: 2
+            }
+        }
+    });});
+

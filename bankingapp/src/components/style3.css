@@ -1,0 +1,44 @@
+
+.Display{
+    background-image:linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),  url(../images/imag20.jpg);
+    height: 1000px; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   /* opacity: 0.5;  */
+    /* z-index: -1;  */
+
+}
+
+.card1{
+    width: 600px;
+    height: auto;
+    margin-left: 500px;
+    background-color: white;
+}
+
+
+/* .card1{
+    width: 600px;
+    height: auto;
+    margin-left: 800px;
+    background-color: white;
+} */
+
+
+.Display5{
+
+    background-image:linear-gradient(rgba(255, 255, 255, 0.61), rgba(255,255,255,.5)),  url(../images/img1.jpg);
+    
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   /* opacity: 0.5;  */
+    /* z-index: -1;  */
+font-size: 20px;
+height: 800px;
+}

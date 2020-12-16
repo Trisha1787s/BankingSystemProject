@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BankProjectModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ChangeAM">
+    <Key>
+      <PropertyRef Name="Username" />
+      <PropertyRef Name="DateAndTime" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo" Type="Int64" />
+    <Property Name="DateAndTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RequestChequeBook">
+    <Key>
+      <PropertyRef Name="Username" />
+      <PropertyRef Name="Status" />
+      <PropertyRef Name="DateAndTime" />
+    </Key>
+    <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateAndTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="BankProjectEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ChangeAMs" EntityType="Self.ChangeAM" />
+    <EntitySet Name="RequestChequeBooks" EntityType="Self.RequestChequeBook" />
+  </EntityContainer>
+</Schema>

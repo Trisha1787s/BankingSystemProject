@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BankProjectModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BankProject.dbo.ChangeAM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ChangeAM">
+    <Key>
+      <PropertyRef Name="Username" />
+      <PropertyRef Name="DateAndTime" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Name="Username" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="MobileNo" Type="bigint" />
+    <Property Name="DateAndTime" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BankProject.dbo.RequestChequeBook' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RequestChequeBook">
+    <Key>
+      <PropertyRef Name="Username" />
+      <PropertyRef Name="Status" />
+      <PropertyRef Name="DateAndTime" />
+    </Key>
+    <Property Name="Username" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="DateAndTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="BankProjectModel1StoreContainer">
+    <EntitySet Name="ChangeAM" EntityType="Self.ChangeAM" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ChangeAM].[Username] AS [Username], 
+    [ChangeAM].[Address] AS [Address], 
+    [ChangeAM].[MobileNo] AS [MobileNo], 
+    [ChangeAM].[DateAndTime] AS [DateAndTime], 
+    [ChangeAM].[Status] AS [Status]
+    FROM [dbo].[ChangeAM] AS [ChangeAM]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RequestChequeBook" EntityType="Self.RequestChequeBook" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [RequestChequeBook].[Username] AS [Username], 
+    [RequestChequeBook].[Status] AS [Status], 
+    [RequestChequeBook].[DateAndTime] AS [DateAndTime]
+    FROM [dbo].[RequestChequeBook] AS [RequestChequeBook]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

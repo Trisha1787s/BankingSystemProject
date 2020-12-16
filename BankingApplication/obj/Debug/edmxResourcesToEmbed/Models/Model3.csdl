@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BankProjectModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BankProjectEntities2" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="Usp_Empsearch" ReturnType="Collection(BankProjectModel2.Usp_Empsearch_Result)">
+      <Parameter Name="Fromdate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="Usp_Empsearch_Result">
+    <Property Type="Int32" Name="TransactionId" Nullable="false" />
+    <Property Type="DateTime" Name="DateAndTime" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Remarks" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="Debt" Nullable="true" />
+    <Property Type="Int32" Name="Credit" Nullable="true" />
+    <Property Type="Int32" Name="Balance" Nullable="false" />
+    <Property Type="Int32" Name="AccountNo" Nullable="false" />
+  </ComplexType>
+</Schema>

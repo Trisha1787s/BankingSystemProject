@@ -1,0 +1,74 @@
+.Editing{
+    margin-top: 100px;
+margin-left: 200px;
+font-size: 20px;
+
+  }
+  .Editing7{
+    margin-top: 100px;
+margin-left: 200px;
+font-size: 20px;
+
+  }
+
+
+  .Editing1{
+    margin-top: 100px;
+margin-left: 100px;
+
+  }
+
+
+  .Picture1{
+    background-image: url(../images/img9.jpg);
+    height: 400px; 
+    
+    position: fixed;
+    margin-top: 50px;
+  }
+  .Editing3{
+    margin-top:70px;
+    margin-bottom: 50px;
+  position: fixed;
+    margin-right: 100px;
+    margin-left: 1100px;
+    height: 250px;
+  border: 1px solid yellow;
+    
+  }
+
+  .Services{
+    margin-top:700px;
+  }
+
+
+.Images{
+    background-image: url(../images/img9.jpg);
+    height: 400px; 
+}
+
+.Editing5{
+    margin-top: 60px;
+
+
+  }
+.Editing6{
+   
+        margin-top:70px;
+        margin-bottom: 50px;
+      /* position: fixed; */
+        margin-right: 100px;
+        
+        height: 250px;
+      border: 1px solid yellow;
+        
+    
+  }
+
+  .Form1{
+      margin-top: 10px;
+      width: 500px;
+      height: 250px;
+      margin-left: 500px;
+      border: 1px solid yellow;
+  }
