@@ -152,10 +152,22 @@ namespace BankingApplication.Controllers
         public object employeedetailById(string username)
 
         {
-
+try{
             var obj = db.Customers.Where(x => x.Username == username).ToList().FirstOrDefault();
 
             return obj;
+            }
+             catch (Exception ex)
+            {
+                return new Response
+
+                {
+                    Status = "Error",
+
+                    Message = ex.StackTrace
+
+                };
+            }
 
         }
 
