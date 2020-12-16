@@ -243,66 +243,9 @@ namespace BankingApplication.Controllers
             }
         }
 
-        //[Route("displaychequebook")]
-        //[HttpGet]
-        //public object displaycheque()
-        //{
-        //    try
-        //    {
-        //        var cheque = from c in db3.RequestChequeBooks
-        //                     select c;
-        //        return cheque.ToList();
+       
 
-        //    }catch(Exception ex)
-        //    {
-        //        return new Response
-
-        //        {
-        //            Status = "Error",
-
-        //            Message = ex.Message
-
-        //        };
-        //    }
-        //}
-
-        //[HttpPost]  
-
-        //public object Deleteemployee(string username)
-
-        //{
-        //    try
-        //    {
-        //        var obj = db1.RequestChequeBooks.Where(x => x.Username == username).ToList().FirstOrDefault();
-
-        //        db1.RequestChequeBooks.Remove(obj);
-
-        //        db1.SaveChanges();
-
-        //        return new Response
-
-        //        {
-
-        //            Status = "Delete",
-
-        //            Message = "Delete Successfuly"
-
-        //        };
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        return new Response
-
-        //        {
-
-        //            Status = "Delete",
-
-        //            Message = "Delete Successfuly"
-
-        //        };
-        //    }
-
-      //  }
+      
     [HttpPost]
     [Route("DeleteUserDetails")]
     public object DeleteUserDelete(string username)
