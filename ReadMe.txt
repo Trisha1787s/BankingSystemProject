@@ -16,4 +16,10 @@ Tables in the Database are:
 5.ChangeAM-Conatins details related to request for change in address or mobile number by the account holder.
 
 
+Note:
+In the above uploaded folders
+bankingapp-Contains the front end code
+BankingApplication-Contains back end code
+BankProject-Database
+
 
