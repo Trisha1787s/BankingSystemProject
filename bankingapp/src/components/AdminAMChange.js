@@ -138,7 +138,7 @@ export default function AdminAMChange(props) {
                        <td> {item.Status}</td> 
                       
                        <td> <button onClick={() => { AcceptRequest(item.Username,item.Address,item.MobileNo,item.DateAndTime) }} className="btn btn-success mb-1" block><span>Accept</span></button>  </td>
-                       <td> <button onClick={() => { DeclineRequest(item.Username,item.Address,item.MobileNo,item.DateAndTime) }}  className="btn btn-danger mb-1" block><span>Delete</span></button>  </td>
+                       <td> <button onClick={() => { DeclineRequest(item.Username,item.Address,item.MobileNo,item.DateAndTime) }}  className="btn btn-danger mb-1" block><span>Reject</span></button>  </td>
                       
 
                         
